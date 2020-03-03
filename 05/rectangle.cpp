@@ -11,6 +11,8 @@ int main()
 	int i = 0, j = 0;
 	while (i < n) {
 		/* print a row of m stars. */
+		cout<<"* ";
+		i++;
 		while (j < m) {
 			cout << "* ";
 			j++;
