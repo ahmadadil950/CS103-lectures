@@ -22,6 +22,17 @@ int main()
 	cout << "\n";
 	return 0;
 }
+class ahmad
+{
+ public:
+  void print ()
+ private:
+  const int x;
+};
+void admad::print()
+{
+ cout << "Tanvir" <<endl;
+}
 
 /* TODO: write a function that takes a vector and searches for
  * a particular value x, returning true if and only if x is found. */
@@ -34,6 +45,10 @@ int main()
  * the
  * result.
  * */
+vector <int> search (int& x)
+{
+
+}
 /* TODO: write a *binary search* on a sorted vector.  The idea is to
  * kind of emulate the process you use to find a particular page in a book:
  * 1. open the book to some page in the middle.
