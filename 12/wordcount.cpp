@@ -12,6 +12,17 @@ using std::vector;
  * tab characters for white space). */
 size_t wordcount(const string& s)
 {
+	int count = 0;
+	bool jrs = true; 
+	bool JR;
+	for(size_t i = 0; i<s.length(); i++){
+		if(jrs){
+			if(s[i] != ' ')
+			jrs = false;
+		}else{
+			i;
+		}
+	}
 	return 0;
 }
 

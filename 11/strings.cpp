@@ -1,4 +1,4 @@
-#include <iostream>
+	#include <iostream>
 using std::cin;
 using std::cout;
 #include <string>
@@ -10,6 +10,18 @@ size_t find(const string& s, const string& t)
 {
 	/* TODO: try to re-write this function from scratch (refer to the
 	 * notes from lecture as little as possible). */
+	int i ,j;
+	for(i = 0; i<s.length(); i++){
+		if(t[0] == s[i]){
+			return s[i+j];
+		}
+		for(j = 0; j<t.length(); j++){
+			if(t[j] != s[i+j])
+			{
+				break;
+			}
+		}
+	}
 	return -1;
 }
 
@@ -23,6 +35,14 @@ size_t find(const string& s, const string& t)
  * */
 void YELL(string& s) {
 	/* make all lower case chars upper case. */
+	for(int i = 0; i <= s.length(); i++){
+		if(s[i] >= 97 && s[i] <= 122){
+			s[i] = s[i] - 32;
+		}
+		else if(s[i] >= 65 && s[i] <= 90){
+			s[i] = s[i] + 32;
+		}
+	}
 }
 
 /* TODO: write a function that takes a string and returns a boolean
@@ -32,6 +52,7 @@ void YELL(string& s) {
 int main()
 {
 	string s,t;
+	string l;
 	cout << "enter larger string: ";
 	cin >> s;
 	cout << "enter target string: ";
@@ -42,6 +63,10 @@ int main()
 	} else {
 		cout << "target " << t << " found at index " << i << ".\n";
 	}
+	cout<<"enter l"<<"\n";
+	cin>>l;
+	YELL(l);
+	cout<<" the string entered in upper or lowercase "<< l << "\n";
 	/* TODO: write test code for the other exercises here. */
 	return 0;
 }

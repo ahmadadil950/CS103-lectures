@@ -22,7 +22,7 @@ int main()
 	cout << "\n";
 	return 0;
 }
-class ahmad
+/*class ahmad
 {
  public:
   void print ()
@@ -32,7 +32,7 @@ class ahmad
 void admad::print()
 {
  cout << "Tanvir" <<endl;
-}
+}*/
 
 /* TODO: write a function that takes a vector and searches for
  * a particular value x, returning true if and only if x is found. */
