@@ -7,6 +7,8 @@ struct node {
 	node* next;
 };
 
+node* copy(node* L);
+
 /* L is a pointer to the first node */
 void reverse(node*& L)
 {
@@ -48,6 +50,7 @@ int main(void)
 
 	/* try to reverse it */
 	reverse(L);
+	copy(L);
 	/* print everything back out to make sure it worked: */
 	for (node* i = L; i != NULL ; i = i->next) {
 		cout << i->data << " ";
@@ -61,5 +64,12 @@ int main(void)
  * return a pointer to the start of the new list.  Here's a prototype: */
 node* copy(node* L)
 {
+	node* first = NULL;
+	node* end = NULL;
+	while(first != end){
+		*L = *first;
+		++L;
+		++first;
+	}
 	return NULL; /* just so it compiles... */
 }

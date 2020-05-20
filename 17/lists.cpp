@@ -7,6 +7,11 @@ struct node {
 	node* next;
 };
 
+struct dummy {
+	node* first;
+	node* end;
+};
+
 /* exercise: read all of stdin into a list (preserving the order) */
 
 int main(void)
@@ -14,6 +19,8 @@ int main(void)
 	int x; /* for input */
 	node* L = NULL; /* pointer to beginning of list */
 	node* last = NULL; /* invariant: pointer to last node */
+	node* first = L;
+	node* end = last;
 	if (cin >> x) {
 		L = new node;
 		L->data = x;

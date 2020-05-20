@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+using std::vector;
 using std::cin;
 using std::cout;
 /* TODO: read the first two sections of l4.pdf, and do the exercises therein.
@@ -9,6 +11,13 @@ using std::cout;
  * a function, perhaps using the following prototype: */
 void growArray(int*& A, size_t cursize, size_t newsize)
 {
+	A = new int[cursize];
+	newsize = 2*cursize;
+	int* T = new int[newsize];
+	for(int i = 0; i<cursize; i++){
+		T[i] = A[i];
+	}
+	delete [] A;
 	/* A initially points to a buffer of cursize integers; your job is
 	 * to find A a "new home" of newsize integers. */
 }

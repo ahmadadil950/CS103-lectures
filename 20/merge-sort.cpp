@@ -4,6 +4,8 @@ using std::cout;
 #include <vector>
 using std::vector;
 
+void printVertically(int n);
+
 /* TODO: try to re-write this whole thing from scratch.
  * Also, maybe give it a try with vectors instead of arrays. */
 
@@ -72,6 +74,9 @@ int main()
 		cout << A[i] << " ";
 	}
 	cout << "\n";
+	int n;
+	cin>>n;
+	cout << "\n";
 	return 0;
 }
 
@@ -89,3 +94,12 @@ int main()
  * 8
  * Rules: you can't use any loops.  You can't use vectors or arrays.
  * Just let the recursive function calls do the work for you.  */
+
+void printVertically(int n){
+	if(n % 10 == 0)
+	return;
+
+	printVertically(n/10);
+	cout << (n%10) << "\n";
+	return;
+}

@@ -19,11 +19,25 @@ int main(void)
 		n->next = L; /* step 3 */
 		L = n; /* step 4 */
 	}
+	/*Start of TODO*/
+	node* t = NULL;
+	int y;
+	while(cin>>y){
+		node* t = new node;
+		t->data = y;
+		t->next = new node;
+	}
 
 	node* p = L;
 	while (p != NULL) {
 		cout << p->data << " ";
 		p = p->next;
+	}
+
+	node* r = t;
+	while( r != NULL){
+		cout<< r->data <<" "<<"\n";
+		r = r->next;
 	}
 	return 0;
 	/* TODO: make sure you understand all this! */
